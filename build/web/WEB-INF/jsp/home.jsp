@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>prueba 2</title>
+		<title>Polleria</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
                 <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/polleria_america_logo.png">
