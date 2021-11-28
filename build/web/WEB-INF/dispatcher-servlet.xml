@@ -15,11 +15,15 @@
     -->
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
-            <props>
-                
-                
+            <props>  
+                    <prop key="index.htm">indexController</prop>
+                     
                 <prop key="home.htm">homeController</prop>
-                
+                <prop key="listarProducto.htm">listarController</prop>
+                <prop key="verProducto.htm">verProductoController</prop>
+                <prop key="addProducto.htm">addController</prop>
+                <prop key="editProducto.htm">editProductoController</prop>
+                <prop key="deleteProducto.htm">deleteProductoController</prop>
             </props>
         </property>
     </bean>
@@ -35,6 +39,11 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
-    <bean name="homeController" class="controller.HomeController"></bean>
     
+    <bean name="homeController" class="controller.HomeController"></bean>
+    <bean name="listarController" class="controller.ListarController"></bean>
+    <bean name="verProductoController" class="controller.VerProductoController"></bean>
+    <bean name="addController" class="controller.AddController"></bean>
+    <bean name="editProductoController" class="controller.EditProductoController"></bean>
+    <bean name="deleteProductoController" class="controller.DeleteProductoController"></bean>
 </beans>

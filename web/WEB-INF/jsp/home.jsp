@@ -54,7 +54,7 @@
                                                         <img src="${dato.url_imagen}" alt="" /></a>
                                                         <h3>
                                                             
-                                                        <a href="ver.htm?id=${dato.id}" style="color: black">
+                                                        <a href="verProducto.htm?id=${dato.id}" style="color: black">
                                                         Producto: ${dato.nombre}<br>Precio: S/.${dato.precio}
                                                         </a>
                                                         </h3>
@@ -63,11 +63,25 @@
                                                 </c:forEach> 
                                                 </div>
                                                 <hr>
-         					<ul class="actions">
-						<li><a href="listar.htm" class="button">Listar Produtos</a></li>
-                                                <li><a href="add.htm" class="button">Agregar Productos</a></li>
-                                                <li><a href="productos.htm" class="button" style="background-color: rgba(0,0,255,0.3)">Ver Mesas</a></li>
+                                                <div style="width: 100%">
+                                                    <ul class="actions">
+                                                    <li><a href="listarProducto.htm" class="button">LISTAR PRODUCTOS</a></li>
+                                                    <li><a href="addProducto.htm" class="button">AGREGAR PRODUCTOS</a></li>
+                                                    <li><a href="#" class="button" style="background-color: rgba(0,0,255,0.3)">VER MESAS</a></li>
+                                                    </ul>
+                                                </div>
+         					
+                                                <hr>
+                                                <div style="width: 100%">
+                                                    <h4>Opciones:</h4>
+                                                <ul class="actions">
+						<li><a href="listarProducto.htm" class="button">CLIENTES</a></li>
+                                                <li><a href="addProducto.htm" class="button">MESAS DISPONIBLES</a></li>
+                                                <li><a href="addProducto.htm" class="button">MESEROS</a></li>
+                                                <li><a href="addProducto.htm" class="button">PEDIDOS</a></li>
 						</ul>
+                                                </div>
+                                                
                                                 <hr>
                                                 <h4>
                                                     <u>Visitanos en:</u> 
