@@ -41,8 +41,9 @@
                                                 <div class="row" >
                                                 <c:forEach items="${datosCliente}" var="dato"> 
                                                     <article class="col-4 col-medium work-item">
+                                                        <h3><i>Cliente N° ${dato.id}</i></h3>
                                                         <h3>    
-                                                        <a href="verProducto.htm?id=${dato.id}" style="color: black">
+                                                        <a href="verCliente.htm?id=${dato.id}" style="color: black">
                                                         Datos: ${dato.nombre_cliente} ${dato.apellido_cliente}
                                                         </a>
                                                         </h3>

@@ -26,6 +26,7 @@
                 <prop key="deleteProducto.htm">deleteProductoController</prop>
                 <prop key="homeCliente.htm">homeClienteController</prop>
                 <prop key="login.htm">existenciaUsuario</prop>
+                <prop key="verCliente.htm">verClienteController</prop>
             </props>
         </property>
     </bean>
@@ -50,4 +51,5 @@
     <bean name="deleteProductoController" class="controller.DeleteProductoController"></bean>
     <bean name="homeClienteController" class="controller.HomeClienteController"></bean>
     <bean name="existenciaUsuario" class="controller.ExistenciaUsuario"></bean>
+    <bean name="verClienteController" class="controller.VerClienteController"></bean>
 </beans>
