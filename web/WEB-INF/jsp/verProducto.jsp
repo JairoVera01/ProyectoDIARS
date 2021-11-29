@@ -24,7 +24,6 @@
                         ${producto.nombre}
                     </li>
                 </ol>
-                
             </nav>
                     <div class="container-md border border-primary p-1">
                     <div class="row ">
@@ -38,7 +37,6 @@
                               <div clases="d-flex justify-content-around">
                                   <h1> Producto: ${producto.nombre} </h1><h2 class="text-secondary">Descripcion: ${producto.descripcion}</h2>
                               </div>
-                              
                               <hr>
                               <h3 class="text-secondary"> Precio: S/.${producto.precio}  </h3>
                               <hr>
@@ -52,7 +50,6 @@
                                         <p>Hacer pedido</p>
                                         </a>
                                   <hr>
-               
                               </div> 
                           </article> 
                     </div>

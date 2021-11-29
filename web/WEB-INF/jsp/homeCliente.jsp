@@ -56,8 +56,8 @@
                                                 <hr>
                                                 <div style="width: 100%">
                                                     <ul class="actions">
-                                                    <li><a href="listarProducto.htm" class="button">LISTAR CLIENTES</a></li>
-                                                    <li><a href="addProducto.htm" class="button">AGREGAR CLIENTES</a></li>
+                                                    <li><a href="listarCliente.htm" class="button">LISTAR CLIENTES</a></li>
+                                                    <li><a href="addCliente.htm" class="button">AGREGAR CLIENTES</a></li>
                                                     
                                                     </ul>
                                                 </div>

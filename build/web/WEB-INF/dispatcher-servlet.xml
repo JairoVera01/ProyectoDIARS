@@ -27,6 +27,8 @@
                 <prop key="homeCliente.htm">homeClienteController</prop>
                 <prop key="login.htm">existenciaUsuario</prop>
                 <prop key="verCliente.htm">verClienteController</prop>
+                <prop key="listarCliente.htm">listarClienteController</prop>
+                <prop key="editCliente.htm">editClienteController</prop>
             </props>
         </property>
     </bean>
@@ -52,4 +54,6 @@
     <bean name="homeClienteController" class="controller.HomeClienteController"></bean>
     <bean name="existenciaUsuario" class="controller.ExistenciaUsuario"></bean>
     <bean name="verClienteController" class="controller.VerClienteController"></bean>
+    <bean name="listarClienteController" class="controller.ListarClienteController"></bean>
+    <bean name="editClienteController" class="controller.EditClienteController"></bean>
 </beans>

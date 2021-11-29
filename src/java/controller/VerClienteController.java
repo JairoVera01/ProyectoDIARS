@@ -27,40 +27,43 @@ import org.springframework.web.servlet.ModelAndView;
  * @author jairo
  */
 public class VerClienteController {
+
     private JdbcTemplate jdbcTemplate;
+
     //Controaldor VER
-    public VerClienteController(){
+    public VerClienteController() {
         Conectar conectar = new Conectar();
-        this.jdbcTemplate = new JdbcTemplate(conectar.conectar());                
+        this.jdbcTemplate = new JdbcTemplate(conectar.conectar());
     }
-   
+
     //Se hace peticion de los datos con GET 
-    @RequestMapping(method=RequestMethod.GET)
-    public ModelAndView form(HttpServletRequest request){
-        ModelAndView mav = new ModelAndView();        
+    @RequestMapping(method = RequestMethod.GET)
+    public ModelAndView form(HttpServletRequest request) {
+        ModelAndView mav = new ModelAndView();
         int id = Integer.parseInt(request.getParameter("id"));
         Cliente datosCliente = this.selectCliente(id);
-       
+
         mav.setViewName("verCliente");
-        mav.addObject("cliente",new Cliente(id,datosCliente.getNombre_cliente(),datosCliente.getApellido_cliente(),datosCliente.getDni_cliente(),datosCliente.getDireccion_id(),datosCliente.getTelefono_cliente(),datosCliente.getEstado_cliente())); 
+        mav.addObject("cliente", new Cliente(id, datosCliente.getNombre_cliente(), datosCliente.getApellido_cliente(), datosCliente.getDni_cliente(), datosCliente.getDireccion_id(), datosCliente.getTelefono_cliente(), datosCliente.getEstado_cliente()));
         return mav;
     }
+
     //Se estructura el modelo PERSONA
     @ModelAttribute("cliente")
-    public Cliente datosCliente(HttpServletRequest request){
+    public Cliente datosCliente(HttpServletRequest request) {
         Cliente clienteSeleccionada = new Cliente();
         int id = Integer.parseInt(request.getParameter("id"));
         clienteSeleccionada = selectCliente(id);
         return clienteSeleccionada;
     }
-    
+
     //SETEAMOS LOS DATOSS OBTENIDOS - VER CONTROLLER
     private Cliente selectCliente(int id) {
         final Cliente cliente = new Cliente();
-        String sql = "select *from tbl_cliente where id='"+id+"'";
-        return (Cliente) jdbcTemplate.query(sql, new ResultSetExtractor<Cliente>(){
-            public Cliente extractData(ResultSet rs) throws SQLException,DataAccessException{
-                if(rs.next()){
+        String sql = "select *from tbl_cliente where id='" + id + "'";
+        return (Cliente) jdbcTemplate.query(sql, new ResultSetExtractor<Cliente>() {
+            public Cliente extractData(ResultSet rs) throws SQLException, DataAccessException {
+                if (rs.next()) {
                     cliente.setNombre_cliente(rs.getString("nombre_cliente"));
                     cliente.setApellido_cliente(rs.getString("apellido_cliente"));
                     cliente.setDni_cliente(rs.getInt("dni_cliente"));
@@ -69,8 +72,7 @@ public class VerClienteController {
                     cliente.setEstado_cliente(rs.getInt("estado_cliente"));
                 }
                 return cliente;
-            }     
-        });        
+            }
+        });
     }
-}
-    
+} 
