@@ -66,7 +66,7 @@
                                                 <div style="width: 100%">
                                                     <h4>Opciones:</h4>
                                                 <ul class="actions">
-						<li><a href="" class="button">CLIENTES</a></li>
+						<li><a href="home.htm" class="button">PRODUCTOS</a></li>
                                                 <li><a href="" class="button">MESAS DISPONIBLES</a></li>
                                                 <li><a href="" class="button">MESEROS</a></li>
                                                 <li><a href="" class="button">PEDIDOS</a></li>
